@@ -15,7 +15,7 @@ const SignUp: React.FC = () => {
       <Background />
 
       <Content>
-        <Form initialData={{ name: "Pedro Zunino" }} onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
           <h1>Faça seu cadastro</h1>
           <Input icon={FiUser} name="name" placeholder="Nome" />
           <Input icon={FiMail} name="e-mail" placeholder="E-mail" />
