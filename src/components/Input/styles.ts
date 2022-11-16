@@ -2,7 +2,9 @@ import styled, { css } from "styled-components";
 
 interface ContainerProps {
   isFocused: boolean;
+  isFilled: boolean;
 }
+
 const Container = styled.div<ContainerProps>`
   background-color: #294d2f;
   border-radius: 10px;
@@ -23,6 +25,12 @@ const Container = styled.div<ContainerProps>`
     css`
       color: #238c03;
       border-color: #238c03;
+    `}
+
+  ${(props) =>
+    props.isFilled &&
+    css`
+      color: #238c03;
     `}
   input {
     flex: 1;
