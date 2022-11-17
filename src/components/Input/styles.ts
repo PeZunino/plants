@@ -11,7 +11,6 @@ export const Error = styled.div`
 
   svg {
     margin: 0;
-    color: #c53030;
   }
 `;
 
