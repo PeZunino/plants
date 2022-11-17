@@ -5,9 +5,10 @@ import React, {
   useRef,
   useState,
 } from "react";
-import Container from "./styles";
+import { Container, Error } from "./styles";
 import { IconBaseProps } from "react-icons";
 import { useField } from "@unform/core";
+import { FiAlertCircle } from "react-icons/fi";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
@@ -51,7 +52,11 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
         {...rest}
       />
 
-      {error}
+      {!!error && (
+        <Error>
+          <FiAlertCircle />
+        </Error>
+      )}
     </Container>
   );
 };

@@ -5,7 +5,17 @@ interface ContainerProps {
   isFilled: boolean;
 }
 
-const Container = styled.div<ContainerProps>`
+export const Error = styled.div`
+  height: 20px;
+  margin-left: 16px;
+
+  svg {
+    margin: 0;
+    color: #c53030;
+  }
+`;
+
+export const Container = styled.div<ContainerProps>`
   background-color: #294d2f;
   border-radius: 10px;
   border: 2px solid #294d2f;
@@ -47,5 +57,3 @@ const Container = styled.div<ContainerProps>`
     margin-right: 16px;
   }
 `;
-
-export default Container;
